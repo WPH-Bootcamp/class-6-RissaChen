@@ -1,10 +1,318 @@
 @use '../variables' as *;
 @use 'sass:map';
 
-@function get-color($type, $level) {
+@function get-color($brand, $level) {
+
+  @if get-color ($gray,25) {
+    @return #fcfcfd;
+  } 
+
+  @if get-color($gray,50) {
+    @return #f9facb;
+  }
+
+  @if get-color($gray,100) {
+    @return #F2F4F7;
+  }
+
+  @if get-color($gray, 200) {
+    @return #E4E7EC;
+  }
+
+  @if get-color($gray,300) {
+    @return #D0D5DD;
+  }
+
+  @if get-color($gray,400) {
+    @return #98A2B3;
+  }
+
+  @if get-color($gray,500) {
+    @return #667085;
+  }
+
+  @if get-color($gray,600) {
+    @return #475467;
+  }
+
+  @if get-color($gray,700) {
+    @return #344054;
+  }
+
+  @if get-color($gray,800) {
+    @return #182230;
+  }
+
+  @if get-color($gray,900) {
+    @return #101828;
+  }
+
+  @if get-color($gray,950) {
+    @return #0C111D;
+  }
+
+  @if get-color($gray < 950) {
+    @debug 'Invalid color type or level';
+    @return null;
+  }
+
+  @if get-color($gray > 50) {
+    @debug 'Invalid color type or level';
+    @return null;
+
+    //brand//
+
+  @if get-color($brand,25) {
+  @return #FCFAFF;
+  } 
+
+  @if get-color($brand,50) {
+    @return #F9F5FF;
+  }
+
+  @if get-color($brand,100) {
+    @return #F4EBFF;
+  }
+
+  @if get-color($brand, 200) {
+    @return #E9D7FE;
+  }
+
+  @if get-color($brand,300) {
+    @return #D6BBFB;
+  }
+
+  @if get-color($brand,400) {
+    @return #B692F6;
+  }
+
+  @if get-color($brand,500) {
+    @return #9E77ED;
+  }
+
+  @if get-color($brand,600) {
+    @return #7F56D9;
+  }
+
+  @if get-color($brand,700) {
+    @return #6941C6;
+  }
+
+  @if get-color($brand,800) {
+    @return #53389E;
+  }
+
+  @if get-color($brand,900) {
+    @return #42307D;
+  }
+
+  @if get-color($brand,950) {
+    @return #2C1C5F;
+  }
+
+  @if get-color($brand < 950) {
+    @debug 'Invalid color type or level';
+    @return null;
+  }
+
+  @if get-color($brand > 50) {
+    @debug 'Invalid color type or level';
+    @return null;
+  }
+
+  //error
+
+  @if get-color($error,25) {
+    @return #FFFBFA;
+    } 
+  
+    @if get-color($error,50) {
+      @return #FEF3F2;
+    }
+  
+    @if get-color($error,100) {
+      @return #FEE4E2;
+    }
+  
+    @if get-color($error, 200) {
+      @return #FECDCA;
+    }
+  
+    @if get-color($error,300) {
+      @return #FDA29B;
+    }
+  
+    @if get-color($error,400) {
+      @return #F97066;
+    }
+  
+    @if get-color($error,500) {
+      @return #F04438;
+    }
+  
+    @if get-color($error,600) {
+      @return #D92D20;
+    }
+  
+    @if get-color($error,700) {
+      @return #B42318;
+    }
+  
+    @if get-color($error,800) {
+      @return #912018;
+    }
+  
+    @if get-color($error,900) {
+      @return #7A271A;
+    }
+  
+    @if get-color($error,950) {
+      @return #55160C;
+    }
+  
+    @if get-color($error < 950) {
+      @debug 'Invalid color type or level';
+      @return null;
+    }
+  
+    @if get-color($error > 50) {
+      @debug 'Invalid color type or level';
+      @return null;
+    }
+
+    //warning
+
+    @if get-color($warning,25) {
+      @return #FFFCF5;
+      } 
+    
+      @if get-color($warning,50) {
+        @return #FFFAEB;
+      }
+    
+      @if get-color($warning,100) {
+        @return #FEF0C7;
+      }
+    
+      @if get-color($warning, 200) {
+        @return #FEDF89;
+      }
+    
+      @if get-color($warning,300) {
+        @return #FEC84B;
+      }
+    
+      @if get-color($warning,400) {
+        @return #FDB022;
+      }
+    
+      @if get-color($warning,500) {
+        @return #F79009;
+      }
+    
+      @if get-color($warning,600) {
+        @return #DC6803;
+      }
+    
+      @if get-color($warning,700) {
+        @return #B54708;
+      }
+    
+      @if get-color($warning,800) {
+        @return #93370D;
+      }
+    
+      @if get-color($warning,900) {
+        @return #7A2E0E;
+      }
+    
+      @if get-color($warning,950) {
+        @return #4E1D09;
+      }
+    
+      @if get-color($warning < 950) {
+        @debug 'Invalid color type or level';
+        @return null;
+      }
+    
+      @if get-color($warning > 50) {
+        @debug 'Invalid color type or level';
+        @return null;
+      }
+
+      //success
+    
+      @if get-color($success,25) {
+        @return #F6FEF9;
+        } 
+      
+        @if get-color($success,50) {
+          @return #ECFDF3;
+        }
+      
+        @if get-color($success,100) {
+          @return #DCFAE6;
+        }
+      
+        @if get-color($success, 200) {
+          @return #ABEFC6;
+        }
+      
+        @if get-color($success,300) {
+          @return #75E0A7;
+        }
+      
+        @if get-color($success,400) {
+          @return #47CD89;
+        }
+      
+        @if get-color($success,500) {
+          @return #17B26A;
+        }
+      
+        @if get-color($success,600) {
+          @return #079455;
+        }
+      
+        @if get-color($success,700) {
+          @return #067647;
+        }
+      
+        @if get-color($success,800) {
+          @return #085D3A;
+        }
+      
+        @if get-color($success,900) {
+          @return #074D31;
+        }
+      
+        @if get-color($success,950) {
+          @return #053321;
+        }
+      
+        @if get-color($success < 950) {
+          @debug 'Invalid color type or level';
+          @return null;
+        }
+      
+        @if get-color($success > 50) {
+          @debug 'Invalid color type or level';
+          @return null;
+        }
+      
+
+  }
+
+
   // add the logic here
   // use if else to check if the type and level are valid
   // if they are valid, return the color
   // if they are not valid warn 'Invalid color type or level' and return null
   // null is a special value in Sass that means nothing, and it is used to represent the absence of a value, you need to return null if the type or level is not valid
+ 
+
+
+
+
+
 }
