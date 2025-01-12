@@ -3,34 +3,18 @@
 
 @function get-color($brand, $level) {
 
-  @if map-has-key($colors, 'gray') and map.has-key($colors,$brand,$level) {
-    @return map.get($colors, 'gray');
+  @if map-has-key($colors, $gray, $brand, $error, $warning, $success) and map.has-key($color, $size, $weight ) {
+    @return map.get($gray, $level);
+    @return map.get($brand, $level);
+    @return map.get($error, $level);
+    @return map.get($warning, $level);
+    @return map.get($success, $level);
   } @else  {
     @warn 'Invalid color type or level';
     @return null;
   }
 
-  @if map-has-key($colors, 'brand') and map.has-key($colors,$brand,$level) {
-    @return map.get($colors, 'brand');
-  } @else  {
-    @warn 'Invalid color type or level';
-    @return null;
-  }
-
-  @if map-has-key($colors, 'error') and map.has-key($colors,$brand,$level) {
-    @return map.get($colors, 'error');
-  } @else  {
-    @warn 'Invalid color type or level';
-    @return null;
-  }
-
-  @if map-has-key($colors, 'warning') and map.has-key($colors,$brand,$level) {
-    @return map.get($colors, 'error');
-  } @else  {
-    @warn 'Invalid color type or level';
-    @return null;
-  }
-  }
+}
   
  
 
